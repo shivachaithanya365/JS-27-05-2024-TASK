@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECTS</title>
+    <style>
+        pre {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-left: 6%;
+            width: 85%;
+        }
+
+        h2,
+        h1 {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<h1>SOURCE CODE :</h1>
+<pre>
+    <h2>Updation of captial by state dynamically</h2>
+
+    arr = [{
+        "state": "Telangana", "capital": "Hyderabad"
+    }, {
+        "state": "Andhra pradesh", "capital": "Amaravati"
+    }]
+
+    inputState = "Telangana";
+
+    for (var key in arr) {
+        if (arr[key].state == inputState) {
+            var updState = {
+                "state": arr[key].state,
+                "capital": arr[key].capital
+            };
+        }
+    }
+    console.log(updState);
+
+    <h2>Assigning parent properties to child</h2>
+
+    let parent = {
+        "x": "twitter"
+    }
+    let child = Object.create(parent);
+
+    Object.assign(child, parent);
+
+    console.log(child);
+    console.log(parent);
+
+    <h2>Converting faketoreapi data into array</h2>
+    var a = [
+        {
+            "id": 1,
+            "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+            "price": 109.95,
+            "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the 
+            padded sleeve, your everyday",
+            "category": "men's clothing",
+            "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+            "rating": {
+                "rate": 3.9,
+                "count": 120
+            }
+        },
+        {
+            "id": 2,
+            "title": "Mens Casual Premium Slim Fit T-Shirts ",
+            "price": 22.3,
+            "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft 
+            fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and 
+            a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a 
+            three-button placket.",
+            "category": "men's clothing",
+            "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+            "rating": {
+                "rate": 4.1,
+                "count": 259
+            }
+        }
+    ];
+
+    console.log(Object.entries(a));
+</pre>
+
+<body>
+    <script>
+        //updation of captial by state name dynamically
+
+        arr = [{
+            "state": "Telangana", "capital": "Hyderabad"
+        }, {
+            "state": "Andhra pradesh", "capital": "Amaravati"
+        }]
+
+        inputState = "Telangana";
+
+        for (var key in arr) {
+            if (arr[key].state == inputState) {
+                var updState = {
+                    "state": arr[key].state,
+                    "capital": arr[key].capital
+                };
+            }
+        }
+        console.log(updState);
+
+        //assigning parent properties to child
+
+        let parent = {
+            "x": "twitter"
+        }
+        let child = Object.create(parent);
+
+        Object.assign(child, parent);
+
+        console.log(child);
+        console.log(parent);
+
+        //converting faketoreapi data into array
+        var a = [
+            {
+                "id": 1,
+                "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                "price": 109.95,
+                "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                "category": "men's clothing",
+                "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+                "rating": {
+                    "rate": 3.9,
+                    "count": 120
+                }
+            },
+            {
+                "id": 2,
+                "title": "Mens Casual Premium Slim Fit T-Shirts ",
+                "price": 22.3,
+                "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+                "category": "men's clothing",
+                "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+                "rating": {
+                    "rate": 4.1,
+                    "count": 259
+                }
+            }
+        ];
+        console.log(Object.entries(a));
+    </script>
+</body>
+
+</html>
